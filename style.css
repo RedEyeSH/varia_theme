@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+
+}
+
+a::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+    background-color: black;
+}
+
+a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+body {
+    animation: body-animation 0.1s;
+}
+
+hr {
+    color: black;
+}
+
+p {
+    color: black;
+    text-align: center;
+    margin: 0;
+    transition: 0.5s;
+    font-family: LightFont;
+}
+
+h6, li {
+    font-family: LightFont;
+}
+
+img {
+    margin: auto;
+    display: flex;
+}
+
+svg {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+
+h1, h4 {
+    font-family: MainFont;
+    animation: right-left 2s forwards;
+    color: black;
+}
+
+.container {
+    background-image: url('Varia_WordPress_Background_-_Smaller.png');
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.container h1 {
+    font-family: MainFont;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-image: url('VariaLogo.png');
+    background-size: cover;
+}
+
+.bar {
+    float: right;
+}
+
+.bar svg {
+    width: 25px;
+    height: 25px;
+}
+
+.block {
+    width: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    transition: 1s;
+}
+
+.menu {
+    width: 100%;
+    font-family: LightFont;
+}
+
+.nav .menu ul {
+    display: flex;
+    height: 100px;
+    padding: 0;
+    margin: auto;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.nav .menu ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 60px;
+    margin: auto;
+}
+
+
+.nav .menu ul li a {
+    margin: 20px;
+    color: black;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+/* Archive */
+
+.archive h1 {
+    animation: right-left 1s;
+}
+
+.archive h1 a {
+    color: black;
+    transition: 0.5s;
+}
+
+.archive h1 a:hover {
+    border-radius: 10px;
+}
+
+
+.archive-message {
+    background-color: rgb(0, 66, 165);
+}
+
+.archive-message p {
+    color: white;
+}
+
+.archive-list {
+    width: 88px;
+    height: 24px;
+    border-radius: 5px;
+    list-style: none;
+    transition: 0.5s;
+    margin: 0;  
+}
+
+.archive-list a {
+    display: none;
+}
+
+.archive-list li {
+    margin: auto;
+}
+
+.archive-list ul {
+    display: none;
+}
+
+.archive-list li ul li {
+    opacity: 0;
+}
+
+.categories {
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 24px;
+    position: relative;
+}
+
+.categories::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+    background-color: black;
+}
+
+
+.categories:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.categories ul li {
+    animation: fade-in 0.3s;   
+}
+
+.categories ul li a {
+    text-align: left;
+}
+
+.navbar-anim {
+    height: 72px;
+    transition: 0.4s;
+}
+
+.navbar-anim a {
+    display: block;
+}
+
+.navbar-anim ul {
+    text-transform: capitalize;
+    display: block;
+    height: 48px;
+    padding: 0;
+}
+
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fade-out {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.navbar-anim li ul li {
+    list-style-type: none;
+    opacity: 1;
+    transition: 0.7s;
+}
+
+/* Page */
+.default-page {
+    font-family: LightFont;
+}
+
+.default-page p {
+    text-align: left;
+}
+
+.wp-block-embed__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.default-page h1 {
+    animation: right-left 0.3s;
+    color: black;
+}
+
+/* Footer */
+.footer {
+    background-color: rgb(0, 66, 165);
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer h6 {
+    color: white;
+    text-align: center;
+}
+
+.footer-top {
+    height: 40px;
+}
+
+.footer-line {
+    height: 1.5px;
+    background-color: white;
+}
+
+.footer-box {
+    display: flex;
+}
+
+.footer-margin-box {
+    width: 100%;
+}
+
+.footer-header-one {
+    width: 70%;
+    height: 270px;
+    margin: 80px;
+}
+
+.footer-header-one p {
+    color:rgb(112, 112, 112);
+}
+
+.footer-header-one h1 {
+    color: rgb(112, 112, 112);
+    text-align: start;
+}
+
+.footer-content-one {
+    margin: 50px 0 50px 0;
+}
+
+.footer-content-one p {
+    color: white;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media svg {
+    margin: 0 10px 0 10px;
+}
+
+.footer-header-two {
+    width: 70%;
+    height: 270px;
+    margin: 80px;
+}
+
+.footer-content-two {
+    margin: 50px 0 50px 0;
+}
+
+.footer-content-two p {
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
+
+.footer-header-three {
+    width: 70%;
+    height: 270px;
+    margin: 80px;
+}
+
+.footer-content-three {
+    margin: 50px 0 50px 0;
+}
+
+.footer-content-three p {
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
+
+.footer-content-three p {
+    color: rgb(112, 112, 112);
+    color: white;
+}
+/* Page */
+.page-message {
+    background-color: rgb(0, 66, 165);
+}
+
+.page-message p {
+    color: white;
+}
+
+/* Single  */
+.single-message {
+    background-color: rgb(0, 66, 165);
+}
+
+.single-message p {
+    color: white;
+}
+
+.default-single {
+    color: black;
+    font-family: LightFont;
+}
+
+.default-single p {
+    text-align: left;
+}
+
+/* animations */
+@keyframes body-animation {
+    from {width: 0; height: 0;}
+    to {width: 100%; height: 100%;}
+}
+
+@keyframes title {
+    from {width: 0;}
+    to {width: 100%}
+}
+
+@keyframes title-block {
+    from {left: 0px; width: 70%;}
+    to {left: 700px; width: 0}
+}
+
+/* Font family */
+@font-face {
+    font-family: MainFont;
+    /* src: url(Poppins-Bold.ttf) */
+    src: url(./Poppins/Poppins-Bold.ttf)
+}
+
+@font-face {
+    font-family: LightFont;
+    src: url(./Poppins/Poppins-Light.ttf)
+}
